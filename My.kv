@@ -1,0 +1,57 @@
+
+<NavScreen>:
+    MDScreen:
+        MDFloatLayout:
+            MDLabel:
+                canvas.before:
+                    Color:
+                        rgba: 1, 1, 1, 1
+        MDBottomNavigation:
+            panel_color: "#ECECEC"
+            selected_color_background: "white"
+            text_color_active: "black"
+            valign:'top'
+            MDBottomNavigationItem:
+                id: screen_1
+                name: 'screen 1'
+                text: 'Home'
+                font_size: "45sp"
+                icon: 'image/icon/home_title.png'
+                
+                Image:
+                    source:'image/MeloGroove logo.png'
+                    size_hint:None,None
+                    pos_hint:{'top':1}
+                    size:60,70
+            MDBottomNavigationItem:
+                id: screen_2
+                name: 'screen 2'
+                text: 'Search'
+                font_size: "45sp"
+                icon: 'image/icon/search_title.png'
+                MDTextField:
+                    id:search_field
+                    size_hint:None,None
+                    width:'320'
+                    radius:0,0,10,10
+                    hint_text: "Search"
+                    hint_text_color_focus:'black'
+                    line_color_focus: 0, 0, 0, 1
+                    mode: "fill"
+                    fill_color: 0, 0, 0, .4
+                    pos_hint: {'center_x': 0.45, 'center_y': 0.95}
+                MDIconButton:
+                    icon: "magnify"
+                    radius:10,10,10,10
+                    style: "filled"
+                    pos_hint: {'center_x': 0.9, 'center_y': 0.95}
+                    on_release:app.search()
+                    
+            MDBottomNavigationItem:
+                id: screen_3
+                name: 'screen 3'
+                text: 'Library'
+                font_size: "45sp"
+                icon: 'image/icon/library_title.png'
+
+
