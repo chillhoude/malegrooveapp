@@ -27,7 +27,7 @@ install:
   - ls -la
   - rm -r -f .buildozer
   - ls -la
-  - yes | cp -f buildozer-64bit.spec buildozer.spec
+  - yes | cp -f buildozer.spec
   - yes | travis_wait 20 buildozer android debug
   - ls -la
   - ls bin/ -l
