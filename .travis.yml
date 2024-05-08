@@ -24,7 +24,8 @@ install:
   - pip3 install --upgrade Cython==0.29.19 virtualenv
   - export PATH=$PATH:~/.local/bin/
   - ls -la
-  - yes | /root/.local/bin/buildozer android debug
+  - yes | buildozer -v android debug
   - gem install dpl --pre
+  - ls bin/ -1
   - dpl releases --token $GITHUB_TOKEN --file "bin/malegroove.apk" --tag_name "v.0.1"
   - echo "TODO 2"
