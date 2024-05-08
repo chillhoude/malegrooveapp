@@ -11,7 +11,7 @@ from kivymd.uix.button import BaseButton,MDTextButton,MDFloatingActionButton
 from kivy.uix.stacklayout import StackLayout
 from kivy.uix.image import AsyncImage
 from kivy.uix.scrollview import ScrollView
-from kivy_audio_android import SoundLoader
+from kivy.core.audio import SoundLoader
 from Player import *
 from kivy.clock import Clock
 
