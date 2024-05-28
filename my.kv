@@ -1,3 +1,42 @@
+<LoginContent>
+    orientation: "vertical"
+    spacing: "12dp"
+    size_hint_y: None
+    height: (app.height_window/100)*20
+
+    MDTextField:
+    	id: login_login
+        hint_text: "Логін"
+
+    MDTextField:
+    	id: login_password
+        hint_text: "Пароль"
+
+<RegistrContent>
+    orientation: "vertical"
+    spacing: "12dp"
+    size_hint_y: None
+    height: (app.height_window/100)*50
+
+    MDTextField:
+    	id: registr_login
+        hint_text: "Логін"
+    MDTextField:
+    	id: registr_email
+        hint_text: "Електронна пошта"
+        
+        
+    MDTextField:
+    	id: registr_password
+        hint_text: "Пароль"
+
+
+    MDTextField:
+    	id: registr_reset_password
+        hint_text: "Повторіть пароль"
+
+
+
 
 <NavScreen>:
     MDScreen:
@@ -17,12 +56,10 @@
                 text: 'Home'
                 font_size: "45sp"
                 icon: 'image/icon/home_title.png'
-                
                 Image:
                     source:'image/MeloGroove logo.png'
-                    size_hint:None,None
-                    pos_hint:{'top':1}
-                    size:60,70
+                    size_hint:.15,.15
+                    pos_hint:{'top':1.02}
             MDBottomNavigationItem:
                 id: screen_2
                 name: 'screen 2'
@@ -31,8 +68,7 @@
                 icon: 'image/icon/search_title.png'
                 MDTextField:
                     id:search_field
-                    size_hint:None,None
-                    width:'320'
+                    size_hint:.75,.1
                     radius:0,0,10,10
                     hint_text: "Search"
                     hint_text_color_focus:'black'
@@ -53,5 +89,3 @@
                 text: 'Library'
                 font_size: "45sp"
                 icon: 'image/icon/library_title.png'
-
-

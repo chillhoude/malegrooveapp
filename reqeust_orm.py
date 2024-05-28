@@ -34,7 +34,13 @@ class AppORM:
         else: 
             response = 'No internet conection'
         return response
-            
-    
+    def register_user(self,login,password,email):
+        params = {'username':login,'password':password,'email':email}
+        responce = requests.post(f'http://{self.host[self.id_host]}:8000/auth/users/',data=params)
+        return responce
+    def login_user(self,login,password):
+        print(login)
+        responce = requests.post(f'http://{self.host[self.id_host]}:8000/auth/token/login/',data={'username':login,'password':password})
+        return responce
 
 

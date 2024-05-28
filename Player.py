@@ -16,9 +16,9 @@ class PlayerMusicManager:
             return self.searchLocalFile(track_name)
         
     def searchLocalFile(self,track_name):
+        if not os.path.isdir(self.track_folder):
+            os.mkdir(self.track_folder)
         for file in os.scandir(self.track_folder):
             if file.name == f'{track_name}.mp3':
                  return f'{self.track_folder}/{track_name}.mp3'
-            else:
-                 return False
         return False
